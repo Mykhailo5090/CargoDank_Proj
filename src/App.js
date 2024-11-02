@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 
 function App() {
+  const a = 10;
   return (
     <div className="App">
       <header className="App-header">
