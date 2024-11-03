@@ -35,6 +35,10 @@ module.exports = (env, argv) => {
             'css-loader',
           ],
         },
+        {
+          test: /\.(png|jpe?g|gif|svg)$/i,
+          type: 'asset/resource',
+        },
       ],
     },
     optimization: {

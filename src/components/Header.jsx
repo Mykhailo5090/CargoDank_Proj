@@ -2,15 +2,16 @@ import React from 'react';
 
 import '../styles/header.css';
 
+import logo from '../assets/images/Logo/logo.png';
+
+import userprofile from '../assets/images/Header/user-header.png';
+
 const Header = () => {
   return (
     <header className="header__wrapper __wrapper">
       <div className="header__grid">
         <div className="header-logo">
-          <img
-            src={require('../assets/images/Logo/logo.png').default}
-            alt="logo"
-          />
+          <img className="logo-img" src={logo} alt="logo" />
         </div>
         <nav className="nav">
           <div className="hamburger-menu">
@@ -26,7 +27,7 @@ const Header = () => {
               </li>
               <li className="li__item li__item_2">
                 <a
-                  className="menu__item menu__item_3"
+                  className="menu__item menu__item_2"
                   href="./certificates.html"
                 >
                   {' '}
@@ -34,18 +35,13 @@ const Header = () => {
                 </a>
               </li>
               <li className="li__item li__item_3">
-                <a className="menu__item menu__item 4" href="./privacy.html">
+                <a className="menu__item menu__item_3" href="./privacy.html">
                   <p className="p">ПАРТНЕРАМ</p>
                 </a>
               </li>
               <li className="li__item li__item_4">
-                <a className="menu__item menu__item 4" href="./privacy.html">
-                  <img
-                    src={
-                      require('../assets/images/Header/user-header.png').default
-                    }
-                    alt="user-profile"
-                  />
+                <a className="menu__item menu__item_4" href="./privacy.html">
+                  <img className="p" src={userprofile} alt="user-profile" />
                 </a>
               </li>
             </ul>

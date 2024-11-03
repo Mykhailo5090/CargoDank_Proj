@@ -11,9 +11,11 @@ import Main from '../pages/Home';
 const App = () => {
   return (
     <div className="app-container">
-      <Header />
-      <Main />
-      <Footer />
+      <div className="sub-body">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </div>
   );
 };

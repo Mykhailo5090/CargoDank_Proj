@@ -5,12 +5,14 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0; }
+  padding: 0;
+}
 
 /* Убираем внешние отступы */
 body,
@@ -27,40 +29,47 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0; }
+  margin: 0;
+}
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
-  list-style: none; }
+  list-style: none;
+}
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto;
+}
 
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
-  display: block; }
+  display: block;
+}
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
 select {
-  font: inherit; }
+  font: inherit;
+}
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
@@ -71,36 +80,50 @@ select {
     animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; } }
+    scroll-behavior: auto !important;
+  }
+}
 /*Null css END*/
 body {
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+}
 
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white; }
 
-header h2 {
-  margin: 0; }
 
 .main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-row: 1/1;
-  grid-column: 1/1;
-  padding: 20px; }
+  flex: 1;
+  padding: 20px;
+}
 
 footer {
   background-color: #282c34;
   padding: 10px;
   color: white;
-  text-align: center; }
+  text-align: center;
+}
 
 /*# sourceMappingURL=main.css.map */
+
+.sub-body {
+  background-image: url(../assets/images/background/fog-1.png);
+  animation: scroll 100s linear infinite;
+  background-size: cover;
+}
+
+.sub-body__2 {
+  background-image: url(../assets/images/background/fog-2.png);
+  animation: scroll 100s linear infinite;
+  background-size: cover;
+}
+
+@keyframes scroll {
+  100% {
+    background-position: -100% 0%;
+  }
+}
