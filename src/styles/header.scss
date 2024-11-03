@@ -108,7 +108,7 @@ html {
 }
 header {
   background-color: rgba(135, 135, 135, 0.075);
-//   padding: 20px;
+  //   padding: 20px;
   color: white;
 }
 
@@ -330,15 +330,15 @@ a {
     justify-items: end;
   }
 }
-.menu__item_4{
-    display: grid;
-    min-width: 20%;
-    max-width: 20%;
-    margin-left: 50%;
-    margin-top:3%;
+.menu__item_4 {
+  display: grid;
+  min-width: 20%;
+  max-width: 20%;
+  margin-left: 50%;
+  margin-top: 3%;
 }
-.logo-img{
-    width: 20%;
+.logo-img {
+  width: 20%;
 }
 
 /*--------------------- Header END ----------------------*/
