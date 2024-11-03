@@ -5,7 +5,7 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
@@ -49,7 +49,7 @@ ol[class] {
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
@@ -75,23 +75,19 @@ select {
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
 /*Null css END*/
 
-
-
-
 body {
   font-family: Arial, sans-serif;
 }
-
 
 .app-container {
   display: flex;
@@ -109,8 +105,12 @@ header h2 {
   margin: 0;
 }
 
-main {
-  flex: 1;
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row: 1/1;
+  grid-column: 1/1;
   padding: 20px;
 }
 
@@ -120,7 +120,6 @@ footer {
   color: white;
   text-align: center;
 }
-
 
 // .sub-body{
 //   background-image: url(assets/images/background/fog-2.png);
@@ -135,7 +134,6 @@ footer {
 //   background-size: cover;
 
 // }
-
 
 // @keyframes scroll{
 //   100%{

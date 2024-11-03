@@ -6,13 +6,13 @@ import Footer from './Footer';
 
 import '../styles/main.css';
 
+import Main from '../pages/Home';
+
 const App = () => {
   return (
     <div className="app-container">
       <Header />
-      <main>
-        <h1>Welcome to Custom React App</h1>
-      </main>
+      <Main />
       <Footer />
     </div>
   );

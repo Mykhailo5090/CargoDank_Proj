@@ -4,7 +4,7 @@ import '../styles/main.css';
 
 function Login() {
   return (
-    <div className=''>
+    <div className="login-container">
       <h1>Hello, world!</h1>
     </div>
   );
