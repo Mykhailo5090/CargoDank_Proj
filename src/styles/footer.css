@@ -5,14 +5,12 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0;
-}
+  padding: 0; }
 
 /* Убираем внешние отступы */
 body,
@@ -29,47 +27,40 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
-}
+  margin: 0; }
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
+  line-height: 1.5; }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
-  list-style: none;
-}
+  list-style: none; }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
-}
+  text-decoration-skip-ink: auto; }
 
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
-  display: block;
-}
+  display: block; }
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
-  margin-top: 1em;
-}
+  margin-top: 1em; }
 
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
 select {
-  font: inherit;
-}
+  font: inherit; }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
@@ -80,9 +71,112 @@ select {
     animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+    scroll-behavior: auto !important; } }
 /*Null css END*/
+/*START*/
+footer {
+  margin-top: 4%;
+  background-color: #fff;
+  padding: 0; }
+
+.footer__container {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-wrap: nowrap;
+  justify-content: flex-end; }
+
+.footer__container__item_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end; }
+
+.p__produced__footer {
+  color: #000;
+  font-size: 100%; }
+
+.span__footer__powered {
+  color: #a93c2b;
+  font-weight: bold; }
+
+.img__logo__footer {
+  padding: auto;
+  margin: auto; }
+
+.sub-sub__footer__container__item_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end; }
+
+.sub-footer__container__item_1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end; }
+
+.p__footer__info__bald {
+  font-size: 600%;
+  color: #a93c2b;
+  font-weight: bold; }
+
+.button__footer__info {
+  background-color: #a93c2b;
+  color: #fff;
+  width: 50%;
+  height: 25%;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  padding: auto;
+  font-size: 160%;
+  text-align: center;
+  justify-content: center; }
+
+.sub-footer__container__item_2 {
+  display: flex;
+  flex-direction: row; }
+
+.sub__div__footer__item_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end; }
+
+.sub-sub__2__footer__item_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start; }
+
+.p__sub__div__label {
+  color: #a93c2b;
+  font-size: 300%;
+  font-weight: bold; }
+
+.p__sub__div__footel__info {
+  color: #a93c2b;
+  font-size: 200%; }
+
+.footer__wrapper {
+  padding-top: 2%; }
+
+.img__logo__footer {
+  margin-bottom: 10%;
+  height: auto;
+  width: auto; }
+
+.footer__container {
+  margin-right: 0;
+  margin-left: 100px; }
+
+.footer__container__item_1 {
+  margin-right: auto; }
+
+.img__footer__logist {
+  height: auto;
+  width: auto;
+  min-height: 328.5px; }
 
 /*# sourceMappingURL=footer.css.map */
