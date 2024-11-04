@@ -110,8 +110,6 @@ footer {
   // grid-template-columns: 1fr;
   // grid-template-rows: 1fr 1fr 1fr 1fr;
   height: auto;
-
-
 }
 .main__item_1 {
   grid-row: 1/2;
@@ -169,59 +167,54 @@ footer {
     background-position: -100% 0%;
   }
 }
-.p__sprinters{
+.p__sprinters {
   font-size: 300%;
   font-weight: bold;
   color: $maincolor;
   text-align: center;
 }
-.sprinter__item{
+.sprinter__item {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr auto;
   grid-row-gap: 3%;
   grid-column-gap: 3%;
   margin-top: 2%;
   height: auto;
-
-
 }
-.sprinter-item{
-  background-color: $b-color; 
-  padding: 10px; 
-  border-radius: 4px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  text-align: center; 
-  margin: .5%;
+.sprinter-item {
+  background-color: $b-color;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 0.5%;
   height: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 
   height: 100%;
-  width: 100%; 
+  width: 100%;
   display: grid;
   grid-column: 1fr;
-  grid-template-rows: 2fr 1fr ;
+  grid-template-rows: 2fr 1fr;
   color: $maincolor;
 }
 .sprinter-item img {
-  max-width: 100%; 
-  height: auto; 
-  
+  max-width: 100%;
+  height: auto;
 }
-.sprinter-img{
+.sprinter-img {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.text-container{
+.text-container {
   grid-column: 1/2;
   grid-row: 2/3;
   color: $maincolor;
   text-align: left;
 }
-
-
 
 .text-container {
   overflow: hidden; /* Переповнення буде приховане */
@@ -231,28 +224,28 @@ footer {
   -webkit-box-orient: vertical; /* Вертикальна орієнтація */
 }
 
-.main__item_2{
+.main__item_2 {
   display: flex;
   flex-direction: row;
 }
-.main__item_1{
+.main__item_1 {
   display: flex;
   flex-direction: row;
 }
-.ducatto_img{
+.ducatto_img {
   max-height: 940px;
   z-index: 1;
 }
-.main__item{
+.main__item {
   margin-top: 3%;
 }
-.p__sprinters{
+.p__sprinters {
   margin-top: 4%;
 }
-.ducatto_logo{
-  z-index: 3;
+.ducatto_logo {
   position: absolute;
-  text-align: right;
+  z-index: 3;
+  padding-left: 90%;
 }
 
 .camion-info {
@@ -264,5 +257,6 @@ footer {
   margin-top: -30%;
   position: absolute;
 }
-
-
+.main__item_2 {
+  position: relative;
+}

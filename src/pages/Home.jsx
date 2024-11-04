@@ -75,9 +75,7 @@ function Main() {
       <div className="main__item main__item_2">
         <img className="ducatto_img" src={ducato} alt="ducato" />
 
-        <img className="ducatto_logo " src={logo} alt="logo" />
-
-        <div className="ducatto__item"></div>
+        <img className="ducatto_logo" src={logo} alt="logo" />
       </div>
     </div>
   );
