@@ -3,11 +3,27 @@ import { getAds } from '../api';
 import '../styles/Transporter.css';
 import headercamion from '../assets/images/Header/header-camion.png';
 import '../styles/main.css';
+import AddCargoModal from '../components/AddCargoModal';
 
 const Transporter = () => {
   const [ads, setAds] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const adsPerPage = 10;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleAddCargo = () => {
+    // Логіка для додавання вантажу до особистого кабінету
+    console.log('Cargo added to the account!');
+    handleCloseModal();
+  };
 
   useEffect(() => {
     const fetchAds = async () => {
@@ -41,6 +57,15 @@ const Transporter = () => {
         </div>
       </div>
       <div className="transporter__container">
+        <button onClick={handleOpenModal} className="open-modal-button">
+          Додати вантаж
+        </button>
+
+        <AddCargoModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          onAdd={handleAddCargo}
+        />
         {/* Header section */}
         {/* Ads section */}
         <div className="bg-gray-800 p-6 rounded-lg">

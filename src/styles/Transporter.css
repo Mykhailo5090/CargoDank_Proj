@@ -143,4 +143,16 @@
 .transporter__container {
   min-height: 100vh; }
 
+.open-modal-button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; }
+
+.open-modal-button:hover {
+  background-color: #d62828; }
+
 /*# sourceMappingURL=Transporter.css.map */
