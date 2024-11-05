@@ -76,7 +76,7 @@ select {
 .div__container__partner {
   display: flex;
   flex-direction: column;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .sub-div__partner__item_1 {
   display: grid;
@@ -144,5 +144,39 @@ select {
   color: #fff;
   font-size: 200%;
   margin-top: 2%; }
+
+.div__partner__item {
+  margin-top: 2%;
+  margin-bottom: 2%; }
+
+.partners__text {
+  color: #fff;
+  font-size: 140%; }
+
+.container__partners__1 {
+  display: flex; }
+
+.p__item__container__partners {
+  color: #fff;
+  padding-top: 5%;
+  font-size: 140%; }
+
+.img__partners__people {
+  min-width: auto;
+  min-height: auto;
+  max-height: 650px; }
+
+.div__partner__item_3 {
+  display: flex;
+  margin-bottom: 0; }
+
+.img__teenagers {
+  max-width: 1000px; }
+
+.p__teenagers {
+  padding-bottom: 4%; }
+
+.main__item_1 {
+  margin-top: 0; }
 
 /*# sourceMappingURL=partner.css.map */

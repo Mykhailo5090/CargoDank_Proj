@@ -3,24 +3,29 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px; }
+  padding: 20px;
+}
 
 .main__item {
-  position: relative; }
+  position: relative;
+}
 
 .span_text_camion {
   display: block;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .ads-section {
   background-color: #2d2d2d;
   border-radius: 8px;
-  padding: 24px; }
+  padding: 24px;
+}
 
 .ads-title {
   color: #fff;
   font-size: 28px;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+}
 
 .ad-card {
   background-color: #3d3d3d;
@@ -28,63 +33,77 @@
   padding: 16px;
   margin-bottom: 16px;
   display: flex;
-  gap: 16px; }
+  gap: 16px;
+}
 
 .ad-image {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px; }
+  border-radius: 8px;
+}
 
 .ad-content {
-  flex: 1; }
+  flex: 1;
+}
 
 .ad-description {
   color: #fff;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 .ad-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; }
+  gap: 16px;
+}
 
 .route-info {
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 8px; }
+  gap: 8px;
+}
 
 .price-info {
-  text-align: right; }
+  text-align: right;
+}
 
 .price-per-km {
   color: #ff6b6b;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 .distance {
   color: #fff;
   font-size: 14px;
-  margin-top: 4px; }
+  margin-top: 4px;
+}
 
 .cargo-details {
-  color: #fff; }
+  color: #fff;
+}
 
 .cargo-detail-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+}
 
 .total-price-section {
-  text-align: right; }
+  text-align: right;
+}
 
 .total-price {
   color: #fff;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .total-price-value {
   color: #ff6b6b;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .add-button {
   background-color: #b45050;
@@ -94,17 +113,20 @@
   border: none;
   cursor: pointer;
   margin-top: 16px;
-  transition: background-color 0.3s ease; }
+  transition: background-color 0.3s ease;
+}
 
 .add-button:hover {
-  background-color: #943f3f; }
+  background-color: #943f3f;
+}
 
 /* Pagination styles */
 .pagination {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 24px; }
+  margin-top: 24px;
+}
 
 .page-button {
   width: 32px;
@@ -115,33 +137,42 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease; }
+  transition: background-color 0.3s ease;
+}
 
 .page-button.active {
   background-color: #b45050;
-  color: #fff; }
+  color: #fff;
+}
 
 .page-button:not(.active) {
   background-color: #4d4d4d;
-  color: #fff; }
+  color: #fff;
+}
 
 .page-button:not(.active):hover {
-  background-color: #5d5d5d; }
+  background-color: #5d5d5d;
+}
 
 .text-white {
-  color: #fff; }
+  color: #fff;
+}
 
 .font-bold {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .mb-2 {
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+}
 
 .mt-4 {
-  margin-top: 16px; }
+  margin-top: 16px;
+}
 
 .transporter__container {
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 .open-modal-button {
   background-color: #e63946;
@@ -150,9 +181,11 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .open-modal-button:hover {
-  background-color: #d62828; }
+  background-color: #d62828;
+}
 
 /*# sourceMappingURL=Transporter.css.map */
