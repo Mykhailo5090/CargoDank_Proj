@@ -84,3 +84,122 @@ select {
   }
 }
 /*Null css END*/
+
+/*START*/
+footer {
+  margin-top: 4%;
+  background-color: #fff;
+  padding: 0;
+}
+.footer__container {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.footer__container__item_1 {
+}
+.footer__container__item_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.p__produced__footer {
+  color: #000;
+  font-size: 100%;
+}
+$maincolor: #a93c2b;
+.span__footer__powered {
+  color: $maincolor;
+  font-weight: bold;
+}
+.img__logo__footer {
+  padding: auto;
+  margin: auto;
+}
+.sub-sub__footer__container__item_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.sub-footer__container__item_1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+}
+.p__footer__info__bald {
+  font-size: 600%;
+  color: $maincolor;
+  font-weight: bold;
+}
+.button__footer__info {
+  background-color: $maincolor;
+  color: #fff;
+  width: 50%;
+  height: 25%;
+  border-radius: 20px;
+  border: none;
+  box-shadow: none;
+  padding: auto;
+  font-size: 160%;
+  text-align: center;
+  justify-content: center;
+}
+.sub-footer__container__item_2 {
+  display: flex;
+  flex-direction: row;
+  // margin-top: 2%;
+}
+.sub__div__footer__item_2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.sub-sub__2__footer__item_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.p__sub__div__label {
+  color: $maincolor;
+  font-size: 300%;
+  font-weight: bold;
+}
+.p__sub__div__footel__info {
+  color: $maincolor;
+  font-size: 200%;
+}
+.footer__wrapper {
+  padding-top: 2%;
+  // padding-bottom: 2%;
+}
+// .sub-sub__footer__container__item_1{
+//   margin-bottom: 1%;
+// }
+.img__logo__footer {
+  margin-bottom: 10%;
+  height: auto;
+  width: auto;
+}
+.footer__container {
+  margin-right: 0;
+  margin-left: 100px;
+}
+.footer__container__item_1 {
+  margin-right: auto;
+}
+.img__footer__logist {
+  height: auto;
+  width: auto;
+  min-height: 328.5px;
+}
+footer{
+  padding: 0;
+}
