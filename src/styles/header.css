@@ -88,12 +88,14 @@ html {
   grid-template-rows: 1fr;
   padding-bottom: 0%;
   padding-top: 0%;
-  position: relative; }
+  position: relative;
+  z-index: 999; }
 
 header {
   background-color: rgba(135, 135, 135, 0.075);
   color: white;
-  position: absolute; }
+  position: absolute;
+  z-index: 999; }
 
 .centre-logo > .hr__logo {
   height: 4px;
