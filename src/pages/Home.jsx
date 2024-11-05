@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react';
 import headercamion from '../assets/images/Header/header-camion.png';
 import SprinterItem from '../components/sprinterItem';
 import '../styles/main.css';
@@ -9,8 +10,12 @@ import cargo from '../assets/images/Main/vantazhivka.png';
 import gruz from '../assets/images/Main/gruzchik-popularnaya-profesiya.png';
 import vantazh from '../assets/images/Main/istockphoto-1325350394-612x612.png';
 import potomain from '../assets/images/Main/depositphotos_66930937-stock-photo-loading-and-unloading-of-containers.png';
+// import 'react-toastify/dist/ReactToastify.css';
+import Pagination from 'react-js-pagination';
 
 function Main() {
+  const [activePage, setActivePage] = useState(1);
+
   const sprinterData = [
     { id: 1, img: sprinter, text1: 'Спринтер 1', text2: 'Опис спринтера 1' },
     { id: 2, img: sprinter, text1: 'Спринтер 2', text2: 'Опис спринтера 2' },
@@ -24,6 +29,10 @@ function Main() {
       text2: 'Довгий опис спринтера з додатковими деталями для прикладу...',
     },
   ];
+
+  const handlePageChange = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
 
   return (
     <div className="main">
@@ -57,6 +66,29 @@ function Main() {
       <div className="main__item main__item_3 ">
         <img className="ducatto_img" src={ducato} alt="ducato" />
         <img className="ducatto_logo" src={logo} alt="logo" />
+        <div className="pagination__container">
+          <ul className="pagination-container">
+            {[...Array(11)].map((_, index) => (
+              <li
+                key={index + 1}
+                className={`pagination-item ${activePage === index + 1 ? 'active' : ''}`}
+              >
+                {index + 1}
+              </li>
+            ))}
+          </ul>
+          <Pagination
+            activePage={activePage}
+            itemsCountPerPage={2}
+            totalItemsCount={6}
+            pageRangeDisplayed={3} // обмежує кількість видимих сторінок до 3
+            onChange={handlePageChange}
+            hideFirstLastPages // приховує кнопки "перша" і "остання" сторінки
+            hideNavigation // приховує стрілки навігації
+            itemClass="pagination-item"
+            linkClass="pagination-link"
+          />
+        </div>
       </div>
 
       {/* About Section */}
