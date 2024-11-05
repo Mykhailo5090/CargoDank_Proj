@@ -87,3 +87,82 @@ select {
 }
 /*Null css END*/
 
+
+
+.div__container__partner{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.sub-div__partner__item_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 3%;
+    padding: 2%;
+    margin-top: 2%;
+}
+.div__partner__item_1{
+    background-color: $b-color;
+    margin-top: 4%;
+    border-radius: 10px;
+}
+.item__sub-div_1{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.item__sub-div_2{
+    grid-column: 2/3;
+    grid-row: 2/5;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.item__sub-div_3{
+    grid-column: 3/4;
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item__sub-div_4{
+    grid-column: 4/5;
+    grid-row: 2/5;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+.item__sub-div{
+    background-color: rgba(255, 255, 255, 0.508);
+    border-radius: 10px;
+    padding: 4%;
+    color: #fff;
+}
+.p__text__sub-div{
+    font-size: 140%;
+
+}
+.p__sub-div__label{
+    font-size: 180%;
+}
+.p__partner__label{
+    text-align: center;
+    color: #fff;
+    font-size: 200%;
+    margin-top: 2%;
+}
