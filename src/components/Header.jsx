@@ -1,9 +1,7 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../styles/header.css';
-
 import logo from '../assets/images/Logo/logo.png';
-
 import userprofile from '../assets/images/Header/user-header.png';
 
 const Header = () => {
@@ -21,28 +19,24 @@ const Header = () => {
             </label>
             <ul className="menu__box">
               <li className="li__item li__item_1">
-                <a className="menu__item menu__item_1" href="./index.html">
+                <Link className="menu__item menu__item_1" to="/">
                   <p className="p">ГОЛОВНА</p>
-                </a>
+                </Link>
               </li>
               <li className="li__item li__item_2">
-                <a
-                  className="menu__item menu__item_2"
-                  href="./certificates.html"
-                >
-                  {' '}
+                <Link className="menu__item menu__item_2" to="/transporter">
                   <p className="p">ПЕРЕВІЗНИКУ</p>
-                </a>
+                </Link>
               </li>
               <li className="li__item li__item_3">
-                <a className="menu__item menu__item_3" href="./privacy.html">
+                <Link className="menu__item menu__item_3" to="/partners">
                   <p className="p">ПАРТНЕРАМ</p>
-                </a>
+                </Link>
               </li>
               <li className="li__item li__item_4">
-                <a className="menu__item menu__item_4" href="./privacy.html">
+                <Link className="menu__item menu__item_4" to="/privacy">
                   <img className="p" src={userprofile} alt="user-profile" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
