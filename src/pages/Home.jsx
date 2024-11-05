@@ -70,6 +70,7 @@ function Main() {
               corporis assumenda quisquam illo fugit laboriosam autem magnam
               architecto, laudantium sunt dignissimos?
             </a>
+            <span className="arrows "> &gt;&gt; </span>
 
             <button className="location-title location-button" href="#">
               dfjhg
@@ -82,9 +83,18 @@ function Main() {
           </li>
 
           <li className="sub-item__about sub-item__about_2 location-listing">
+            <h1 className="location-title location-h1">title</h1>
             <a className="location-title" href="#">
-              WE
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              quibusdam recusandae neque fuga, dolor nesciunt animi iusto cumque
+              corporis assumenda quisquam illo fugit laboriosam autem magnam
+              architecto, laudantium sunt dignissimos?
             </a>
+            <span className="arrows "> &gt;&gt; </span>
+
+            <button className="location-title location-button" href="#">
+              dfjhg
+            </button>
             <div className="location-image">
               <a href="#">
                 <img src={gruz} alt="gruzchik" />
@@ -92,9 +102,18 @@ function Main() {
             </div>
           </li>
           <li className="sub-item__about sub-item__about_3 location-listing">
+            <h1 className="location-title location-h1">title</h1>
             <a className="location-title" href="#">
-              Hannah
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              quibusdam recusandae neque fuga, dolor nesciunt animi iusto cumque
+              corporis assumenda quisquam illo fugit laboriosam autem magnam
+              architecto, laudantium sunt dignissimos?
             </a>
+            <span className="arrows "> &gt;&gt; </span>
+
+            <button className="location-title location-button" href="#">
+              dfjhg
+            </button>
             <div className="location-image">
               <a href="#">
                 <img src={potomain} alt="port" />
@@ -102,9 +121,18 @@ function Main() {
             </div>
           </li>
           <li className="sub-item__about sub-item__about_4 location-listing">
+            <h1 className="location-title location-h1">title</h1>
             <a className="location-title" href="#">
-              Sarah
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              quibusdam recusandae neque fuga, dolor nesciunt animi iusto cumque
+              corporis assumenda quisquam illo fugit laboriosam autem magnam
+              architecto, laudantium sunt dignissimos?
             </a>
+            <span className="arrows "> &gt;&gt; </span>
+
+            <button className="location-title location-button" href="#">
+              dfjhg
+            </button>
             <div className="location-image">
               <a href="#">
                 <img src={cargo} alt="camion" />

@@ -179,4 +179,20 @@ select {
 .main__item_1 {
   margin-top: 0; }
 
+.FAQ_container {
+  color: #fff; }
+
+.label__FAQ {
+  font-size: 200%;
+  color: #fff;
+  margin-top: 1%; }
+
+.p__FAQ {
+  color: #fff;
+  font-size: 140%; }
+
+.text__FAQ {
+  font-size: 300%;
+  color: #fff; }
+
 /*# sourceMappingURL=partner.css.map */

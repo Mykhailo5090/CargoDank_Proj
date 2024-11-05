@@ -124,26 +124,31 @@ const Partner = () => {
         </div>
       </div>
       <div className="div__partner__item_3 div__partner__item __wrapper__partner">
-        <p className="p__teenagers p__item__container__partners">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempore
-          consequuntur iusto itaque praesentium temporibus! Deleniti molestias
-          alias quas dolorem eveniet ipsa modi ut eos quos voluptate, atque
-          aperiam suscipit. Voluptatibus nemo quas tenetur illo officiis
-          voluptates quae eius! Culpa eos fuga officiis, commodi illo autem
-          veritatis quam sint perspiciatis, aperiam quis similique architecto
-          libero quia dignissimos, excepturi quas iste. Repellendus natus
-          reiciendis dolor cupiditate ducimus possimus aperiam? Perspiciatis,
-          corrupti? Quam eveniet sed perferendis, pariatur aut saepe recusandae
-          voluptatum veniam, eaque voluptas harum fugit maxime sint minus quia
-          nihil ipsa? Labore architecto fugiat rerum error id placeat a
-          incidunt, dolor corporis quam deleniti sequi rem commodi accusantium
-          voluptatibus praesentium fuga esse animi exercitationem libero
-          temporibus nihil magnam? Aut, minus nisi. Inventore eos, et commodi
-          fuga veritatis vitae atque dicta placeat officia consequuntur
-          assumenda. Provident molestias eligendi suscipit libero aliquid ab
-          iste, ad voluptatum. Praesentium adipisci quis autem harum aliquid
-          nobis.
-        </p>
+        <div className="FAQ__container">
+          <p className="text__FAQ">FAQ</p>
+          <p className="label__FAQ">Lorem Ipsum</p>
+          <p className="p__FAQ">
+            -Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
+            beatae! Sequi odio vero voluptates odit. Omnis illum atque quibusdam
+            maiores voluptas itaque reprehenderit, dignissimos error delectus
+            eligendi reiciendis. Quae, rem?
+          </p>
+          <p className="label__FAQ">Lorem Ipsum</p>
+          <p className="p__FAQ">
+            -Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
+            beatae! Sequi odio vero voluptates odit. Omnis illum atque quibusdam
+            maiores voluptas itaque reprehenderit, dignissimos error delectus
+            eligendi reiciendis. Quae, rem?
+          </p>
+          <p className="label__FAQ">Lorem Ipsum</p>
+          <p className="p__FAQ">
+            -Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
+            beatae! Sequi odio vero voluptates odit. Omnis illum atque quibusdam
+            maiores voluptas itaque reprehenderit, dignissimos error delectus
+            eligendi reiciendis. Quae, rem?
+          </p>
+        </div>
+
         <img src={teenager} alt="teenagers" className="img__teenagers" />
       </div>
     </div>

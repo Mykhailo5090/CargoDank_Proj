@@ -178,21 +178,38 @@ select {
   padding-top: 5%;
   font-size: 140%;
 }
-.img__partners__people{
-    min-width: auto;
-    min-height: auto;
-    max-height: 650px;
+.img__partners__people {
+  min-width: auto;
+  min-height: auto;
+  max-height: 650px;
 }
-.div__partner__item_3{
-    display: flex;
-    margin-bottom: 0;
+.div__partner__item_3 {
+  display: flex;
+  margin-bottom: 0;
 }
-.img__teenagers{
-    max-width: 1000px;
+.img__teenagers {
+  max-width: 1000px;
 }
-.p__teenagers{
-    padding-bottom: 4%;
+.p__teenagers {
+  padding-bottom: 4%;
 }
-.main__item_1{
-    margin-top: 0;
+.main__item_1 {
+  margin-top: 0;
+}
+.FAQ_container{
+    color: #fff;
+}
+.label__FAQ{
+    font-size: 200%;
+    color: #fff;
+    margin-top: 1%;
+
+}
+.p__FAQ{
+    color: #fff;
+    font-size: 140%;
+}
+.text__FAQ{
+    font-size: 300%;
+    color: #fff;
 }
