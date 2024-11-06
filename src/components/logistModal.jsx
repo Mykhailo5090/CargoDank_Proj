@@ -2,22 +2,27 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-const Modal = ({ isOpen, onClose }) => {
+const LogistModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}></button>
-        <h2>Modal Title</h2>
-        <p>This is the content of the modal.</p>
+        <div className="modal-header">
+          <button className="close-button" onClick={onClose}>
+            X
+          </button>
+        </div>
+        <div className="modal-body">
+          <p>Content of the modal</p>
+        </div>
       </div>
     </div>
   );
 };
-Modal.propTypes = {
+LogistModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 
-export default Modal;
+export default LogistModal;
