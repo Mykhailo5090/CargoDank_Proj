@@ -178,8 +178,12 @@ input.input-error::placeholder {
 
 .login__goog__apple {
   display: flex;
-  gap: 2%;
-  margin-top: 6%; }
+  margin-top: 6%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%; }
 
 .p__sign__up {
   color: #fff;
@@ -199,5 +203,54 @@ input.input-error::placeholder {
   margin-top: 8%;
   display: flex;
   gap: 2%; }
+
+.link__to__registration {
+  color: #3a5b22; }
+
+.p__input__login {
+  font-size: 140%; }
+
+.input__login {
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #3a5b22;
+  background-color: rgba(67, 67, 67, 0.277);
+  color: #3a5b22;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%; }
+
+.p__input__login_1 {
+  margin-top: 3%; }
+
+.login__checkbox {
+  margin-top: 4%; }
+
+.button__login {
+  background-color: #3a5b22;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 40%;
+  margin-top: 4%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 29%;
+  font-size: 140%;
+  padding: 3%; }
+
+.button__login_1 {
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%; }
+
+.line {
+  background-color: #fff; }
+
+.line-container {
+  margin-top: 4%; }
 
 /*# sourceMappingURL=login.css.map */

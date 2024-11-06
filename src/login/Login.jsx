@@ -50,32 +50,34 @@ function Login() {
     <div className="login-container">
       <img className="img__login" src={loginimg} alt="login_img" />
       <div className="login__item">
-        <p className="login__label">Welcome Back!</p>
+        <p className="login__label">З поверненням! </p>
         <p className="login__sub-label">
-          Enter your Credentials to access your Account
+          Введіть свої дані для авторизації в вашому акаунті
         </p>
         <div className="input__container__login">
-          <p className="p__input__login p__input__login_1">Enter your email</p>
+          <p className="p__input__login p__input__login_1">
+            Введіть ваш e-mail:
+          </p>
           <label>
             <input
               type="text"
               value={inputValue1}
               onChange={handleChange1}
-              placeholder={error1 ? error1 : 'Напишіть тут...'}
-              className={error1 ? 'input-error' : ''}
+              placeholder={error1 ? error1 : 'example@gmail.com'}
+              className={error1 ? 'input-error' : '' || 'input__login'}
             />
           </label>
 
           <p className="p__input__login p__input__login_1">
-            Enter your password
+            Введіть ваш пароль:
           </p>
           <label>
             <input
               type="text"
               value={inputValue2}
               onChange={handleChange2}
-              placeholder={error2 ? error2 : 'Напишіть тут...'}
-              className={error2 ? 'input-error' : ''}
+              placeholder={error2 ? error2 : '12345678'}
+              className={error2 ? 'input-error' : '' || 'input__login'}
             />
           </label>
 
@@ -85,13 +87,18 @@ function Login() {
                 type="checkbox"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
+                className="login__checkbox"
               />
               Погоджуюсь з умовами
             </label>
           </div>
 
-          <button type="submit" onClick={handleSubmit}>
-            Відправити
+          <button
+            className="button__login button__login_1"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Увійти
           </button>
           <div className="line-container">
             <div className="line"></div>
@@ -123,7 +130,9 @@ function Login() {
         </div>
         <div className="div__register">
           <p className="p__have__acc">Немаєте створеного акаунта?</p>
-          <Link to="/register">Перейдіть до реєстрації</Link>
+          <Link className="link__to__registration" to="/register">
+            Перейдіть до реєстрації
+          </Link>
           {''}
         </div>
       </div>
