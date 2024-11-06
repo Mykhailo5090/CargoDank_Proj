@@ -1,37 +1,65 @@
 const express = require('express');
 const cors = require('cors');
-const pool = require('./db'); // Підключення до бази даних
-require('dotenv').config();
+const { Pool } = require('pg');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = process.env.PORT || 3001;
+app.use(cors()); // Включаємо CORS
+app.use(express.json()); // Для розбору JSON-запитів
 
-app.use(cors());
-app.use(express.json());
+// Підключення до бази даних PostgreSQL
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'cargodank',
+  password: 'postgres',
+  port: 5432,
+});
 
-// Тестовий роут для перевірки з'єднання
-app.get('/api/test', async (req, res) => {
+// Реєстрація користувача
+app.post('/register', async (req, res) => {
+  const { username, password, email } = req.body;
+
   try {
-    const result = await pool.query('SELECT NOW()');
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Database connection error' });
+    const hashedPassword = await bcrypt.hash(password, 10); // Хешуємо пароль
+    const result = await pool.query(
+      'INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *',
+      [username, hashedPassword, email]
+    );
+    console.log('User registered:', result.rows[0]);
+    res
+      .status(201)
+      .json({ message: 'User registered successfully', user: result.rows[0] });
+  } catch (error) {
+    console.error('Error registering user:', error);
+    res.status(500).json({ message: 'Error registering user' });
   }
 });
 
-// Отримати всі оголошення
-app.get('/api/ads', async (req, res) => {
+// Логін користувача
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
   try {
-    const result = await pool.query('SELECT * FROM ads');
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Failed to retrieve ads' });
+    const result = await pool.query('SELECT * FROM users WHERE username = $1', [
+      username,
+    ]);
+    const user = result.rows[0];
+
+    if (!user) return res.status(400).json({ message: 'User not found' });
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch)
+      return res.status(400).json({ message: 'Invalid credentials' });
+
+    const token = jwt.sign({ userId: user.id }, 'your_jwt_secret', {
+      expiresIn: '1h',
+    });
+    res.json({ message: 'Login successful', token });
+  } catch (error) {
+    res.status(500).json({ message: 'Error logging in' });
   }
 });
 
-// Запуск серверу
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+app.listen(5001, () => console.log('Backend running on port 5001'));

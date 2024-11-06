@@ -135,7 +135,7 @@ select {
 
 .error-message {
   color: red;
-} 
+}
 .input-error {
   border-color: red;
   border-width: 2px;
@@ -156,17 +156,15 @@ input.input-error::placeholder {
   width: 100%;
 }
 
-
 .line {
   flex-grow: 1;
   height: 1px;
-  margin: 0 10px; 
+  margin: 0 10px;
 }
-
 
 .line-text {
   background-color: #fff;
-  padding: 0 10px; 
+  padding: 0 10px;
   font-weight: bold;
   font-size: 16px;
   color: #000;
@@ -227,8 +225,8 @@ input.input-error::placeholder {
 .link__to__registration {
   color: #3a5b22;
 }
-.link__to__registration:hover{
-    color: #7f9272;
+.link__to__registration:hover {
+  color: #7f9272;
 }
 .p__input__login {
   font-size: 140%;
@@ -265,7 +263,6 @@ input.input-error::placeholder {
   padding-right: 1%;
   padding-top: 1%;
   padding-bottom: 1%;
-  
 }
 
 .line {

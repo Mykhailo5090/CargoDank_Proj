@@ -4,6 +4,7 @@ import loginimg from '../assets/images/Login/login-photo.png';
 import google from '../assets/images/Login/google.png';
 import apple from '../assets/images/Login/apple.png';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Register() {
   const [inputValue1, setInputValue1] = useState('');
@@ -23,7 +24,6 @@ function Register() {
   };
 
   const handleChange3 = (event) => {
-    // нова функція для обробки введення імені
     setInputValue3(event.target.value);
   };
 
@@ -31,7 +31,7 @@ function Register() {
     setIsChecked(event.target.checked);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (inputValue1.trim() === '') {
@@ -47,7 +47,6 @@ function Register() {
     }
 
     if (inputValue3.trim() === '') {
-      // перевірка для імені
       setError3('Це поле не може бути порожнім!');
     } else {
       setError3('');
@@ -59,11 +58,17 @@ function Register() {
       inputValue3.trim() !== '' &&
       isChecked
     ) {
-      console.log('Форма відправлена:', {
-        inputValue1,
-        inputValue2,
-        inputValue3,
-      });
+      try {
+        const response = await axios.post('http://localhost:5001/register', {
+          username: inputValue3,
+          password: inputValue2,
+          email: inputValue1,
+        });
+        alert(response.data.message);
+      } catch (error) {
+        console.error(error);
+        alert('Помилка реєстрації користувача');
+      }
     } else {
       console.log('Будь ласка, заповніть усі поля і погодьтеся з умовами');
     }

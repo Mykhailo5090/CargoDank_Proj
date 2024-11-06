@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '../styles/login.css';
 import loginimg from '../assets/images/Login/login-photo.png';
 import google from '../assets/images/Login/google.png';
@@ -6,43 +7,65 @@ import apple from '../assets/images/Login/apple.png';
 import { Link } from 'react-router-dom';
 
 function Login() {
-  const [inputValue1, setInputValue1] = useState('');
-  const [inputValue2, setInputValue2] = useState('');
-  const [error1, setError1] = useState('');
-  const [error2, setError2] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorEmail, setErrorEmail] = useState('');
+  const [errorPassword, setErrorPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleChange1 = (event) => {
-    setInputValue1(event.target.value);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
 
-  const handleChange2 = (event) => {
-    setInputValue2(event.target.value);
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
   };
 
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (inputValue1.trim() === '') {
-      setError1('Це поле не може бути порожнім!');
+    let isValid = true;
+    if (email.trim() === '') {
+      setErrorEmail('Це поле не може бути порожнім!');
+      isValid = false;
     } else {
-      setError1('');
+      setErrorEmail('');
     }
 
-    if (inputValue2.trim() === '') {
-      setError2('Це поле не може бути порожнім!');
+    if (password.trim() === '') {
+      setErrorPassword('Це поле не може бути порожнім!');
+      isValid = false;
     } else {
-      setError2('');
+      setErrorPassword('');
     }
 
-    if (inputValue1.trim() !== '' && inputValue2.trim() !== '' && isChecked) {
-      console.log('Форма відправлена:', { inputValue1, inputValue2 });
-    } else {
-      console.log('Будь ласка, заповніть усі поля і погодьтеся з умовами');
+    if (!isChecked) {
+      alert('Будь ласка, погодьтеся з умовами');
+      isValid = false;
+    }
+
+    if (isValid) {
+      try {
+        const response = await axios.post('http://localhost:5001/api/login', {
+          email,
+          password,
+        });
+
+        if (response.status === 200) {
+          // Save the token in localStorage upon successful login
+          localStorage.setItem('authToken', response.data.token);
+          console.log('Успішний вхід:', response.data);
+          // Redirect or additional actions after successful login
+        } else {
+          console.log('Помилка входу:', response.data.message);
+        }
+      } catch (error) {
+        console.error('Помилка сервера:', error);
+      }
     }
   };
 
@@ -50,7 +73,7 @@ function Login() {
     <div className="login-container">
       <img className="img__login" src={loginimg} alt="login_img" />
       <div className="login__item">
-        <p className="login__label">З поверненням! </p>
+        <p className="login__label">З поверненням!</p>
         <p className="login__sub-label">
           Введіть свої дані для авторизації в вашому акаунті
         </p>
@@ -61,10 +84,10 @@ function Login() {
           <label>
             <input
               type="text"
-              value={inputValue1}
-              onChange={handleChange1}
-              placeholder={error1 ? error1 : 'example@gmail.com'}
-              className={error1 ? 'input-error' : '' || 'input__login'}
+              value={email}
+              onChange={handleEmailChange}
+              placeholder={errorEmail ? errorEmail : 'example@gmail.com'}
+              className={errorEmail ? 'input-error' : '' || 'input__login'}
             />
           </label>
 
@@ -73,11 +96,11 @@ function Login() {
           </p>
           <label>
             <input
-              type="text"
-              value={inputValue2}
-              onChange={handleChange2}
-              placeholder={error2 ? error2 : '12345678'}
-              className={error2 ? 'input-error' : '' || 'input__login'}
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+              placeholder={errorPassword ? errorPassword : '12345678'}
+              className={errorPassword ? 'input-error' : '' || 'input__login'}
             />
           </label>
 
@@ -105,7 +128,7 @@ function Login() {
             <span className="line-text">або</span>
             <div className="line"></div>
           </div>
-          <div className="login__goog__apple ">
+          <div className="login__goog__apple">
             <div className="goog__container sign__up__container">
               <img
                 className="img__google img__sign__up"
@@ -133,7 +156,6 @@ function Login() {
           <Link className="link__to__registration" to="/register">
             Перейдіть до реєстрації
           </Link>
-          {''}
         </div>
       </div>
     </div>
