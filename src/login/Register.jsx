@@ -35,20 +35,20 @@ function Register() {
     event.preventDefault();
 
     if (inputValue1.trim() === '') {
-      setError1('Це поле не може бути порожнім');
+      setError1('Це поле не може бути порожнім!');
     } else {
       setError1('');
     }
 
     if (inputValue2.trim() === '') {
-      setError2('Це поле не може бути порожнім');
+      setError2('Це поле не може бути порожнім!');
     } else {
       setError2('');
     }
 
     if (inputValue3.trim() === '') {
       // перевірка для імені
-      setError3('Це поле не може бути порожнім');
+      setError3('Це поле не може бути порожнім!');
     } else {
       setError3('');
     }
@@ -166,7 +166,7 @@ function Register() {
         </div>
         <div className="div__register">
           <p className="p__have__acc">Вже є акаунт?</p>
-          <Link className="link__to__registration" to="/register">
+          <Link className="link__to__registration" to="/login">
             Перейдіть до авторизації
           </Link>
         </div>

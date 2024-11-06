@@ -28,13 +28,13 @@ function Login() {
     event.preventDefault();
 
     if (inputValue1.trim() === '') {
-      setError1('Це поле не може бути порожнім');
+      setError1('Це поле не може бути порожнім!');
     } else {
       setError1('');
     }
 
     if (inputValue2.trim() === '') {
-      setError2('Це поле не може бути порожнім');
+      setError2('Це поле не може бути порожнім!');
     } else {
       setError2('');
     }

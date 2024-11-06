@@ -5,12 +5,14 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0; }
+  padding: 0;
+}
 
 /* Убираем внешние отступы */
 body,
@@ -27,40 +29,47 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0; }
+  margin: 0;
+}
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
-  list-style: none; }
+  list-style: none;
+}
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto;
+}
 
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
-  display: block; }
+  display: block;
+}
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
 select {
-  font: inherit; }
+  font: inherit;
+}
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
@@ -71,75 +80,93 @@ select {
     animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; } }
+    scroll-behavior: auto !important;
+  }
+}
 /*Null css END*/
 body {
   font-family: Arial, sans-serif;
-  background-color: #303030; }
+  background-color: #303030;
+}
 
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 footer {
   color: white;
-  text-align: center; }
+  text-align: center;
+}
 
 .main {
-  height: auto; }
+  height: auto;
+}
 
 .main__item_1 {
   grid-row: 1/2;
   grid-column: 1/2;
   padding: 0;
-  min-height: 1080px; }
+  min-height: 1080px;
+}
 
 .header-camion {
-  z-index: -1; }
+  z-index: -1;
+}
 
 .Main {
-  height: 100vh; }
+  height: 100vh;
+}
 
 .__wrapper_1 {
   padding-left: 100px;
   padding-right: 100px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .__wrapper {
   padding-left: 100px;
   padding-right: 100px;
   overflow: hidden;
-  min-width: 100%; }
+  min-width: 100%;
+}
 
 .p__camion__info {
   text-align: center;
   justify-content: center;
   font-size: 200%;
   padding-top: 5%;
-  position: absolute; }
+  position: absolute;
+}
 
 .span_text_camion {
-  color: #46130b; }
+  color: #46130b;
+}
 
 .sub-body {
   background-image: url(../assets/images/background/fog-1.png);
   animation: scroll 100s linear infinite;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .sub-body__2 {
   background-image: url(../assets/images/background/fog-2.png);
   animation: scroll 100s linear infinite;
-  background-size: cover; }
+  background-size: cover;
+}
 
 @keyframes scroll {
   100% {
-    background-position: -100% 0%; } }
+    background-position: -100% 0%;
+  }
+}
 .p__sprinters {
   font-size: 300%;
   font-weight: bold;
   color: #a93c2b;
-  text-align: center; }
+  text-align: center;
+}
 
 .sprinter__item {
   display: grid;
@@ -148,7 +175,8 @@ footer {
   grid-row-gap: 3%;
   grid-column-gap: 3%;
   margin-top: 2%;
-  height: auto; }
+  height: auto;
+}
 
 .sprinter-item {
   background-color: rgba(128, 128, 128, 0.354);
@@ -166,21 +194,25 @@ footer {
   display: grid;
   grid-column: 1fr;
   grid-template-rows: 2fr 1fr;
-  color: #a93c2b; }
+  color: #a93c2b;
+}
 
 .sprinter-item img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .sprinter-img {
   grid-column: 1/2;
-  grid-row: 1/2; }
+  grid-row: 1/2;
+}
 
 .text-container {
   grid-column: 1/2;
   grid-row: 2/3;
   color: #a93c2b;
-  text-align: left; }
+  text-align: left;
+}
 
 .text-container {
   overflow: hidden;
@@ -192,25 +224,31 @@ footer {
   -webkit-line-clamp: 2;
   /* Кількість рядків, які ми хочемо показати */
   -webkit-box-orient: vertical;
-  /* Вертикальна орієнтація */ }
+  /* Вертикальна орієнтація */
+}
 
 .main__item_2 {
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 .ducatto_img {
   max-height: 940px;
-  z-index: 1; }
+  z-index: 1;
+}
 
 .main__item {
-  margin-top: 3%; }
+  margin-top: 3%;
+}
 
 .main__item_1 {
   display: flex;
   flex-direction: row;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .p__sprinters {
-  margin-top: 4%; }
+  margin-top: 4%;
+}
 
 .camion-info {
   background-color: rgba(128, 128, 128, 0.354);
@@ -220,45 +258,55 @@ footer {
   z-index: 2;
   margin-top: -30%;
   position: absolute;
-  top: 90%; }
+  top: 90%;
+}
 
 .ducatto_logo {
   position: absolute;
   z-index: 3;
-  padding-left: 88%; }
+  padding-left: 88%;
+}
 
 .item__about_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
+  grid-template-rows: 1fr 1fr;
+}
 
 .sub-item__about_1 {
   grid-column: 1/2;
-  grid-row: 1/2; }
+  grid-row: 1/2;
+}
 
 .sub-item__about_2 {
   grid-column: 2/3;
-  grid-row: 1/2; }
+  grid-row: 1/2;
+}
 
 .sub-item__about_3 {
   grid-column: 1/2;
-  grid-row: 2/3; }
+  grid-row: 2/3;
+}
 
 .sub-item__about_4 {
   grid-column: 2/3;
-  grid-row: 2/3; }
+  grid-row: 2/3;
+}
 
 .location-listing {
-  position: relative; }
+  position: relative;
+}
 
 .location-image {
   line-height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .location-image img:hover {
   filter: blur(0px);
   transition: filter 0.3s ease-in;
-  transform: scale(1.1); }
+  transform: scale(1.1);
+}
 
 .location-title {
   font-size: 1em;
@@ -280,7 +328,8 @@ footer {
   text-align: left;
   padding: 5%;
   padding-right: 35%;
-  padding-bottom: 15%; }
+  padding-bottom: 15%;
+}
 
 .arrows {
   font-size: bold;
@@ -293,7 +342,8 @@ footer {
   right: 37%;
   transition: opacity 0.5s;
   z-index: 1;
-  display: none; }
+  display: none;
+}
 
 .location-h1 {
   display: flex;
@@ -302,54 +352,69 @@ footer {
   justify-content: start;
   color: #fff;
   position: absolute;
-  font-size: 250%; }
+  font-size: 250%;
+}
 
 .location-listing:hover .location-title {
   opacity: 1;
-  position: absolute; }
+  position: absolute;
+}
 
 .location-listing:hover .arrows {
   opacity: 1;
   position: absolute;
-  display: flex; }
+  display: flex;
+}
 
 .location-listing:hover .location-image img {
-  filter: blur(2px); }
+  filter: blur(2px);
+}
 
 @media (hover: none) {
   .location-title {
-    opacity: 1; }
+    opacity: 1;
+  }
 
   .location-image img {
-    filter: blur(2px); }
+    filter: blur(2px);
+  }
 
   .location-title-1 {
-    opacity: 1; }
+    opacity: 1;
+  }
 
   .arrows {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 .sub-item__about_1 {
   grid-column: 1/2;
   grid-row: 1/2;
-  position: relative; }
+  position: relative;
+}
 
 .main__item_2 {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .main__item_3 {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 .main__item_4 {
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+}
 
 .__wrapper__partner {
   margin-left: 100px;
-  margin-right: 100px; }
+  margin-right: 100px;
+}
 
 .location-listing {
   position: relative;
-  /* додано для можливості абсолютного позиціонування кнопки */ }
+  /* додано для можливості абсолютного позиціонування кнопки */
+}
 
 .location-button {
   top: 85%;
@@ -367,37 +432,44 @@ footer {
   justify-content: center;
   align-items: center;
   box-shadow: none;
-  border: none; }
+  border: none;
+}
 
 .pagination-container {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .pagination-container {
   position: absolute;
   z-index: 99;
   margin-top: 15%;
   margin-left: 7%;
-  min-width: 300px; }
+  min-width: 300px;
+}
 
 .ducato-list {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .p-pagination {
-  display: flex; }
+  display: flex;
+}
 
 .ducato-item {
   display: flex;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 .label-pagination {
   font-size: 200%;
-  text-align: center; }
+  text-align: center;
+}
 
 .button-pagination {
   background-color: #ffc07e;
@@ -406,32 +478,39 @@ footer {
   width: 40%;
   min-height: 100%;
   border-radius: 20px;
-  content: ''; }
+  content: '';
+}
 
 .button-pagination:hover {
   background-color: #84511a;
   width: 45%;
-  transition: 0.5s; }
+  transition: 0.5s;
+}
 
 .pagination {
-  min-height: 15px; }
+  min-height: 15px;
+}
 
 .button-pagination.active {
   background-color: #84511a;
   /* Ваш бажаний колір */
   color: transparent;
   width: 45%;
-  content: ''; }
+  content: '';
+}
 
 .ducato-item {
   color: #ffc07e;
-  font-size: 140%; }
+  font-size: 140%;
+}
 
 .label-pagination {
-  color: #ffc07e; }
+  color: #ffc07e;
+}
 
 .sub-body.no-background {
   background-image: none;
-  /* Прибирає фонове зображення */ }
+  /* Прибирає фонове зображення */
+}
 
 /*# sourceMappingURL=main.css.map */
