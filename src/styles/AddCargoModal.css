@@ -8,18 +8,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-}
+  z-index: 1000; }
 
 .modal-content {
   background-color: #333;
-  padding: 20px;
   border-radius: 10px;
   width: 90%;
   max-width: 600px;
   color: white;
-  position: relative;
-}
+  position: relative; }
 
 .close-button {
   position: absolute;
@@ -29,33 +26,28 @@
   border: none;
   color: white;
   font-size: 20px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .modal-header {
   display: flex;
   align-items: center;
   gap: 15px;
-}
+  background-color: rgba(128, 128, 128, 0.354); }
 
 .modal-logo {
   width: 50px;
-  height: 50px;
-}
+  height: 50px; }
 
 .modal-title {
   font-size: 24px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .modal-description {
   font-size: 14px;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 .modal-body {
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 .modal-input,
 .modal-textarea {
@@ -63,16 +55,14 @@
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
-  border: none;
-}
+  border: none; }
 
 .modal-image {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
   border-radius: 5px;
-  margin-top: 15px;
-}
+  margin-top: 15px; }
 
 .add-button {
   background-color: #e63946;
@@ -80,11 +70,68 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .add-button:hover {
-  background-color: #d62828;
-}
+  background-color: #d62828; }
+
+.mo .modal-header {
+  background-color: rgba(128, 128, 128, 0.354);
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(128, 128, 128, 0.354); }
+
+.modal__dub-header {
+  display: flex;
+  flex-direction: row;
+  align-items: start; }
+
+.modal__label {
+  font-size: 30px;
+  text-align: left; }
+
+.modal__text {
+  font-size: 20px;
+  text-align: left; }
+
+.modal__input {
+  color: #fff;
+  background-color: rgba(128, 128, 128, 0.354);
+  box-shadow: none;
+  border: 1px solid #fff;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: left;
+  margin-right: 42%; }
+
+.modal__input_1 {
+  margin-top: 20px; }
+
+.modal__label__1 {
+  display: flex;
+  margin-left: 3.5%;
+  margin-top: 20px; }
+
+.modal__submit-button {
+  display: flex;
+  margin-left: 7%;
+  margin-top: 20px;
+  border: none;
+  box-shadow: none;
+  background-color: #a93c2b;
+  color: #fff;
+  border-radius: 10px;
+  padding: 6%;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+
+.sub-modal__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
 
 /*# sourceMappingURL=AddCargoModal.css.map */

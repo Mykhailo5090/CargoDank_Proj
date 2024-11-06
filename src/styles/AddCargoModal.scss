@@ -1,3 +1,5 @@
+$maincolor: #a93c2b;
+$b-color: rgba(128, 128, 128, 0.354);
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -13,7 +15,7 @@
 
 .modal-content {
   background-color: #333;
-  padding: 20px;
+  // padding: 5px;
   border-radius: 10px;
   width: 90%;
   max-width: 600px;
@@ -36,6 +38,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  background-color: $b-color;
 }
 
 .modal-logo {
@@ -85,4 +88,82 @@
 
 .add-button:hover {
   background-color: #d62828;
+}
+$b-color: rgba(128, 128, 128, 0.354);
+.modal-body {
+  // width: 80%;
+  // height: 80%;
+  // background-image: url(../assets//images//background//fog-1.png);
+}
+.mo .modal-header {
+  background-color: $b-color;
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+
+  background-color: $b-color;
+}
+.modal__dub-header {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.modal__label {
+  font-size: 30px;
+  text-align: left;
+}
+.modal__text {
+  font-size: 20px;
+  text-align: left;
+}
+.modal__input{
+  color: #fff;
+  background-color: $b-color;
+  box-shadow: none;
+  border: 1px solid #fff;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: left;
+  margin-right: 42%;
+ 
+
+}
+.modal__input_1{
+  margin-top: 20px;
+}
+// .modal__checkbox{
+//   position: relative;
+//   right: 34%;
+//   margin-top: 20px;
+// }
+.modal__label__1{
+  // position: relative;
+  // right: 30%;
+  display: flex;
+  margin-left: 3.5%;
+  margin-top: 20px;
+
+
+}
+.modal__submit-button{
+  display: flex;
+  margin-left: 7%;
+  margin-top: 20px;
+  border: none;
+  box-shadow: none;
+  background-color: $maincolor;
+  color: #fff;
+  border-radius: 10px;
+  padding: 6%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.sub-modal__inputs{
+  display: flex;
+  flex-direction: row;
+    justify-content: flex-end;
 }
