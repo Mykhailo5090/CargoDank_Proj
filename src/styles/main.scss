@@ -417,32 +417,32 @@ footer {
   flex-direction: column;
 }
 
-.pagination-container{
+.pagination-container {
   position: absolute;
   z-index: 99;
   margin-top: 15%;
   margin-left: 7%;
   min-width: 300px;
 }
-.ducato-list{
+.ducato-list {
   display: flex;
   flex-direction: column;
 }
-.p-pagination{
+.p-pagination {
   display: flex;
 }
-.ducato-item{
+.ducato-item {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.label-pagination{
+.label-pagination {
   font-size: 200%;
   text-align: center;
 }
 
-.button-pagination{
-  background-color: #FFC07E;
+.button-pagination {
+  background-color: #ffc07e;
   border: none;
   box-shadow: none;
   width: 40%;
@@ -450,18 +450,24 @@ footer {
   border-radius: 20px;
   content: '';
 }
-.button-pagination:hover{
-  background-color: #84511A;
+.button-pagination:hover {
+  background-color: #84511a;
   width: 45%;
   transition: 0.5s;
 }
-.pagination{
+.pagination {
   min-height: 15px;
 }
 .button-pagination.active {
-  background-color: #84511A; /* Ваш бажаний колір */
+  background-color: #84511a; /* Ваш бажаний колір */
   color: transparent;
   width: 45%;
   content: '';
 }
-
+.ducato-item{
+  color: #ffc07e;
+  font-size: 140%;
+}
+.label-pagination{
+  color: #ffc07e;
+}

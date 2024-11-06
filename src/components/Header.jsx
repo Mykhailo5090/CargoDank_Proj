@@ -34,7 +34,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="li__item li__item_4">
-                <Link className="menu__item menu__item_4" to="/privacy">
+                <Link className="menu__item menu__item_4" to="/login">
                   <img className="p" src={userprofile} alt="user-profile" />
                 </Link>
               </li>

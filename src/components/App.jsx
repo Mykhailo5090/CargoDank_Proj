@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Transporter from '../pages/Transporter';
 import Partner from '../pages/Partner';
+import Login from '../login/Login';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/transporter" element={<Transporter />} />
             <Route path="/partners" element={<Partner />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <Footer />

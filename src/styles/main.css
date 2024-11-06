@@ -400,7 +400,7 @@ footer {
   text-align: center; }
 
 .button-pagination {
-  background-color: #FFC07E;
+  background-color: #ffc07e;
   border: none;
   box-shadow: none;
   width: 40%;
@@ -409,7 +409,7 @@ footer {
   content: ''; }
 
 .button-pagination:hover {
-  background-color: #84511A;
+  background-color: #84511a;
   width: 45%;
   transition: 0.5s; }
 
@@ -417,10 +417,17 @@ footer {
   min-height: 15px; }
 
 .button-pagination.active {
-  background-color: #84511A;
+  background-color: #84511a;
   /* Ваш бажаний колір */
   color: transparent;
   width: 45%;
   content: ''; }
+
+.ducato-item {
+  color: #ffc07e;
+  font-size: 140%; }
+
+.label-pagination {
+  color: #ffc07e; }
 
 /*# sourceMappingURL=main.css.map */
