@@ -19,7 +19,6 @@ const AppContent = () => {
   const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Function to toggle modal
   const toggleModal = () => {
     setIsModalOpen((prev) => !prev);
   };

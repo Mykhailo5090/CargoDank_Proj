@@ -24,7 +24,7 @@ function Main() {
       id: 6,
       img: sprinter,
       text1: 'Спринтер 6',
-      text2: 'Довгий опис спринтера з додатковими деталями для прикладу...',
+      text2: 'rfekuygurywuirtgpublrtwyghiurhlwggjfeqkvfhgyfegluguvervbegrvylur',
     },
   ];
 
@@ -40,19 +40,16 @@ function Main() {
     { id: 9, img: galochka, title: 'Ducato 9', description: 'Опис Ducato 9' },
   ];
 
-  // Параметри пагінації
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
   const totalPages = 3;
 
-  // Розрахунок початкового та кінцевого індексів для відображення
   const startIndex = (currentPage - 1) * itemsPerPage;
   const selectedDucatoData = ducatoData.slice(
     startIndex,
     startIndex + itemsPerPage
   );
 
-  // Функції для перемикання сторінок
   const goToPreviousPage = () => {
     setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : totalPages));
   };
@@ -66,7 +63,6 @@ function Main() {
     } else if (currentPage === 1) {
       goToNextPage();
     }
-    // Якщо currentPage === 2, то нічого не робить
   };
 
   return (
@@ -124,7 +120,6 @@ function Main() {
               disabled={currentPage === 1}
             ></button>
 
-            {/* Центральна кнопка для відображення активної сторінки */}
             <button
               className={`button-pagination ${currentPage === 2 ? 'active' : ''}`}
               disabled={currentPage === 2}

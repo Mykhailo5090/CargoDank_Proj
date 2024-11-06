@@ -2,8 +2,7 @@
   width: 80%;
   height: 80%; }
 
-.mo
-.modal-header {
+.mo .modal-header {
   background-color: rgba(128, 128, 128, 0.354);
   z-index: 4;
   display: flex;

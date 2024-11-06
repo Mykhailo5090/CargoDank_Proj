@@ -9,10 +9,10 @@ import axios from 'axios';
 function Register() {
   const [inputValue1, setInputValue1] = useState('');
   const [inputValue2, setInputValue2] = useState('');
-  const [inputValue3, setInputValue3] = useState(''); // новий стан для імені
+  const [inputValue3, setInputValue3] = useState('');
   const [error1, setError1] = useState('');
   const [error2, setError2] = useState('');
-  const [error3, setError3] = useState(''); // нова помилка для імені
+  const [error3, setError3] = useState('');
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange1 = (event) => {

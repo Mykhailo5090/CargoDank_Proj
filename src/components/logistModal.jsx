@@ -4,6 +4,7 @@ import logo from '../assets/images/Logo/logo.png';
 import '../styles/AddCargoModal.css';
 import logist from '../assets/images/Main/logost-main.png';
 import emailjs from 'emailjs-com';
+import '../styles/main.css';
 
 const LogistModal = ({ isOpen, onClose }) => {
   const [name, setName] = useState('');
@@ -86,7 +87,7 @@ const LogistModal = ({ isOpen, onClose }) => {
             X
           </button>
         </div>
-        <div className="modal-body">
+        <div className="modal-body sub-body">
           <form onSubmit={handleSubmit}>
             <div className="modal__inputs">
               <label>
