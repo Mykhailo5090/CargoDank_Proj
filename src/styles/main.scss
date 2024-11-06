@@ -464,10 +464,14 @@ footer {
   width: 45%;
   content: '';
 }
-.ducato-item{
+.ducato-item {
   color: #ffc07e;
   font-size: 140%;
 }
-.label-pagination{
+.label-pagination {
   color: #ffc07e;
 }
+.sub-body.no-background {
+  background-image: none;  /* Прибирає фонове зображення */
+}
+
