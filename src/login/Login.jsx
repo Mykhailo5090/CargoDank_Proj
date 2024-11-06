@@ -50,10 +50,18 @@ function Login() {
 
     if (isValid) {
       try {
-        const response = await axios.post('http://localhost:5001/api/login', {
-          email,
-          password,
-        });
+        const response = await axios.post(
+          'http://localhost:5001/login',
+          {
+            email,
+            password,
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json', // Додаємо заголовок для JSON
+            },
+          }
+        );
 
         if (response.status === 200) {
           // Save the token in localStorage upon successful login
