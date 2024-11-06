@@ -5,12 +5,14 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0; }
+  padding: 0;
+}
 
 /* Убираем внешние отступы */
 body,
@@ -27,40 +29,47 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0; }
+  margin: 0;
+}
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
-  list-style: none; }
+  list-style: none;
+}
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto; }
+  text-decoration-skip-ink: auto;
+}
 
 /* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
-  display: block; }
+  display: block;
+}
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
 select {
-  font: inherit; }
+  font: inherit;
+}
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
@@ -71,12 +80,15 @@ select {
     animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important; } }
+    scroll-behavior: auto !important;
+  }
+}
 /*Null css END*/
 .div__container__partner {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
 .sub-div__partner__item_1 {
   display: grid;
@@ -84,12 +96,14 @@ select {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 3%;
   padding: 2%;
-  margin-top: 2%; }
+  margin-top: 2%;
+}
 
 .div__partner__item_1 {
   background-color: rgba(128, 128, 128, 0.354);
   margin-top: 4%;
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
 .item__sub-div_1 {
   grid-column: 1/2;
@@ -98,7 +112,8 @@ select {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center; }
+  align-items: center;
+}
 
 .item__sub-div_2 {
   grid-column: 2/3;
@@ -107,7 +122,8 @@ select {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+}
 
 .item__sub-div_3 {
   grid-column: 3/4;
@@ -116,7 +132,8 @@ select {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center; }
+  align-items: center;
+}
 
 .item__sub-div_4 {
   grid-column: 4/5;
@@ -125,74 +142,92 @@ select {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+}
 
 .item__sub-div {
   background-color: rgba(255, 255, 255, 0.508);
   border-radius: 10px;
   padding: 4%;
-  color: #fff; }
+  color: #fff;
+}
 
 .p__text__sub-div {
-  font-size: 140%; }
+  font-size: 140%;
+}
 
 .p__sub-div__label {
-  font-size: 180%; }
+  font-size: 180%;
+}
 
 .p__partner__label {
   text-align: center;
   color: #fff;
   font-size: 200%;
-  margin-top: 2%; }
+  margin-top: 2%;
+}
 
 .div__partner__item {
   margin-top: 2%;
-  margin-bottom: 2%; }
+  margin-bottom: 2%;
+}
 
 .partners__text {
   color: #fff;
-  font-size: 140%; }
+  font-size: 140%;
+}
 
 .container__partners__1 {
-  display: flex; }
+  display: flex;
+}
 
 .p__item__container__partners {
   color: #fff;
   padding-top: 5%;
-  font-size: 140%; }
+  font-size: 140%;
+}
 
 .img__partners__people {
   min-width: auto;
   min-height: auto;
-  max-height: 650px; }
+  max-height: 650px;
+}
 
 .div__partner__item_3 {
   display: flex;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 .img__teenagers {
-  max-width: 1000px; }
+  max-width: 1000px;
+}
 
 .p__teenagers {
-  padding-bottom: 4%; }
+  padding-bottom: 4%;
+}
 
 .main__item_1 {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .FAQ_container {
-  color: #fff; }
+  color: #fff;
+}
 
 .label__FAQ {
   font-size: 200%;
   color: #fff;
-  margin-top: 1%; }
+  margin-top: 1%;
+}
 
 .p__FAQ {
   color: #fff;
-  font-size: 140%; }
+  font-size: 140%;
+}
 
 .text__FAQ {
   font-size: 300%;
-  color: #fff; }
+  color: #fff;
+}
 
 /*# sourceMappingURL=partner.css.map */

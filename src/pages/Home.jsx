@@ -11,11 +11,9 @@ import gruz from '../assets/images/Main/gruzchik-popularnaya-profesiya.png';
 import vantazh from '../assets/images/Main/istockphoto-1325350394-612x612.png';
 import potomain from '../assets/images/Main/depositphotos_66930937-stock-photo-loading-and-unloading-of-containers.png';
 // import 'react-toastify/dist/ReactToastify.css';
-import Pagination from 'react-js-pagination';
+import galochka from '../assets/images/Main/galochka.png';
 
 function Main() {
-  const [activePage, setActivePage] = useState(1);
-
   const sprinterData = [
     { id: 1, img: sprinter, text1: 'Спринтер 1', text2: 'Опис спринтера 1' },
     { id: 2, img: sprinter, text1: 'Спринтер 2', text2: 'Опис спринтера 2' },
@@ -30,8 +28,45 @@ function Main() {
     },
   ];
 
-  const handlePageChange = (pageNumber) => {
-    setActivePage(pageNumber);
+  const ducatoData = [
+    { id: 1, img: galochka, title: 'Ducato 1', description: 'Опис Ducato 1' },
+    { id: 2, img: galochka, title: 'Ducato 2', description: 'Опис Ducato 2' },
+    { id: 3, img: galochka, title: 'Ducato 3', description: 'Опис Ducato 3' },
+    { id: 4, img: galochka, title: 'Ducato 4', description: 'Опис Ducato 4' },
+    { id: 5, img: galochka, title: 'Ducato 5', description: 'Опис Ducato 5' },
+    { id: 6, img: galochka, title: 'Ducato 6', description: 'Опис Ducato 6' },
+    { id: 7, img: galochka, title: 'Ducato 7', description: 'Опис Ducato 7' },
+    { id: 8, img: galochka, title: 'Ducato 8', description: 'Опис Ducato 8' },
+    { id: 9, img: galochka, title: 'Ducato 9', description: 'Опис Ducato 9' },
+  ];
+
+  // Параметри пагінації
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+  const totalPages = 3;
+
+  // Розрахунок початкового та кінцевого індексів для відображення
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const selectedDucatoData = ducatoData.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  // Функції для перемикання сторінок
+  const goToPreviousPage = () => {
+    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : totalPages));
+  };
+
+  const goToNextPage = () => {
+    setCurrentPage((prevPage) => (prevPage < totalPages ? prevPage + 1 : 1));
+  };
+  const handleButtonClick = () => {
+    if (currentPage === 3) {
+      goToPreviousPage();
+    } else if (currentPage === 1) {
+      goToNextPage();
+    }
+    // Якщо currentPage === 2, то нічого не робить
   };
 
   return (
@@ -62,32 +97,48 @@ function Main() {
         </div>
       </div>
 
-      {/* Ducato Section */}
-      <div className="main__item main__item_3 ">
+      {/* Ducato Section з пагінацією */}
+      <div className="main__item main__item_3">
         <img className="ducatto_img" src={ducato} alt="ducato" />
         <img className="ducatto_logo" src={logo} alt="logo" />
-        <div className="pagination__container">
-          <ul className="pagination-container">
-            {[...Array(11)].map((_, index) => (
-              <li
-                key={index + 1}
-                className={`pagination-item ${activePage === index + 1 ? 'active' : ''}`}
-              >
-                {index + 1}
+        <div className="pagination-container">
+          <p className="label-pagination">Lorem Ipsum</p>
+          <ul className="ducato-list">
+            {selectedDucatoData.map((item) => (
+              <li key={item.id} className="ducato-item">
+                <div className="ducato-item__image">
+                  <img src={item.img} alt={item.title} />
+                </div>
+                <div className="ducato-item__text">
+                  <p className="p-pagination">{item.description}</p>
+                </div>
               </li>
             ))}
           </ul>
-          <Pagination
-            activePage={activePage}
-            itemsCountPerPage={2}
-            totalItemsCount={6}
-            pageRangeDisplayed={3} // обмежує кількість видимих сторінок до 3
-            onChange={handlePageChange}
-            hideFirstLastPages // приховує кнопки "перша" і "остання" сторінки
-            hideNavigation // приховує стрілки навігації
-            itemClass="pagination-item"
-            linkClass="pagination-link"
-          />
+
+          {/* Пагінація */}
+          <div className="pagination">
+            <button
+              className={`button-pagination ${currentPage === 1 ? 'active' : ''}`}
+              onClick={goToPreviousPage}
+              disabled={currentPage === 1}
+            ></button>
+
+            {/* Центральна кнопка для відображення активної сторінки */}
+            <button
+              className={`button-pagination ${currentPage === 2 ? 'active' : ''}`}
+              disabled={currentPage === 2}
+              onClick={handleButtonClick}
+            >
+              {currentPage}
+            </button>
+
+            <button
+              className={`button-pagination ${currentPage === 3 ? 'active' : ''}`}
+              onClick={goToNextPage}
+              disabled={currentPage === totalPages}
+            ></button>
+          </div>
         </div>
       </div>
 
