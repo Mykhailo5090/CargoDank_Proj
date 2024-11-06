@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import axios from 'axios';
 import '../styles/login.css';
 import loginimg from '../assets/images/Login/login-photo.png';
@@ -12,6 +13,8 @@ function Login() {
   const [errorEmail, setErrorEmail] = useState('');
   const [errorPassword, setErrorPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -58,7 +61,7 @@ function Login() {
           },
           {
             headers: {
-              'Content-Type': 'application/json', // Додаємо заголовок для JSON
+              'Content-Type': 'application/json',
             },
           }
         );
@@ -67,7 +70,9 @@ function Login() {
           // Save the token in localStorage upon successful login
           localStorage.setItem('authToken', response.data.token);
           console.log('Успішний вхід:', response.data);
-          // Redirect or additional actions after successful login
+
+          // Redirect to homepage
+          navigate('/'); // Use navigate to go to the homepage
         } else {
           console.log('Помилка входу:', response.data.message);
         }

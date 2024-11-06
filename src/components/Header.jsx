@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import '../styles/header.css';
 import logo from '../assets/images/Logo/logo.png';
 import userprofile from '../assets/images/Header/user-header.png';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({ onMenuClick }) => {
   return (
     <header className="header__wrapper __wrapper">
       <div className="header__grid">
@@ -34,9 +35,14 @@ const Header = () => {
                 </Link>
               </li>
               <li className="li__item li__item_4">
-                <Link className="menu__item menu__item_4" to="/login">
-                  <img className="p" src={userprofile} alt="user-profile" />
-                </Link>
+                {/* Remove Link and add onClick for the profile icon */}
+                <img
+                  className="menu__item menu__item_4 p"
+                  src={userprofile}
+                  alt="User Profile"
+                  onClick={onMenuClick} // Opens modal when clicked
+                  style={{ cursor: 'pointer' }}
+                />
               </li>
             </ul>
           </div>
@@ -44,6 +50,9 @@ const Header = () => {
       </div>
     </header>
   );
+};
+Header.propTypes = {
+  onMenuClick: PropTypes.func.isRequired, // Validates that onMenuClick is a function and required
 };
 
 export default Header;
